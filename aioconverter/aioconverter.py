@@ -13,7 +13,7 @@ class Currency:
 		"""
 		self._token = token
 
-	async def converter(self, pairs: Optional[str]) -> Model:
+	async def converter(self, pairs: Optional[str] = 'USDRUB') -> Model:
 		response = await request(
 				const.currency_api, {
 					'key': self._token,
