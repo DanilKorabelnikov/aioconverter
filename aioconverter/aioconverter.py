@@ -1,5 +1,6 @@
 from aioconverter.const import const
 from aioconverter.http.http import request
+import datetime
 from aioconverter.types.models import Model
 
 
@@ -15,7 +16,8 @@ class Currency:
 				const.currency_api, {
 					'key': self._token,
 					'get': 'rates',
-					'pairs': pairs
+					'pairs': pairs,
+					'date': datetime.datetime.strftime('%Y-%m-%d')
 				}
 		)
 		return Model(**response)
