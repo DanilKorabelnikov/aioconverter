@@ -5,7 +5,7 @@ with open("requirements.txt", "r") as f:
 
 setuptools.setup(
     name="aioconverter",
-    version="0.0.8",
+    version="0.0.9",
     author="DanilKorabelnikov",
     description="",
     url="https://github.com/DanilKorabelnikov/aioconverter",

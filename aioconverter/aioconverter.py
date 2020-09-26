@@ -17,7 +17,7 @@ class Currency:
 					'key': self._token,
 					'get': 'rates',
 					'pairs': pairs,
-					'date': date.today()
+					'date': f"{date.today()}"
 				}
 		)
 		return Model(**response)
