@@ -3,7 +3,7 @@ from typing import Optional
 from aioconverter.const import const
 from aioconverter.http.http import request
 from aioconverter.types.models import Model
-from aioconverter.handlers.handlers import currency
+from aioconverter.handlers.handlers import currency_get
 
 
 class Currency:
@@ -18,7 +18,7 @@ class Currency:
 				const.currency_api, {
 					'key': self._token,
 					'get': 'rates',
-					'pairs': await currency(pairs)
+					'pairs': currency_get(curr=pairs)
 				}
 		)
 		return Model(**response)
