@@ -1,0 +1,1 @@
+currency_api = "https://currate.ru/api/?"
