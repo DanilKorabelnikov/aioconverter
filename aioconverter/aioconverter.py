@@ -17,7 +17,7 @@ class Currency:
 					'key': self._token,
 					'get': 'rates',
 					'pairs': pairs,
-					'date': datetime.datetime.strftime('%Y-%m-%d')
+					'date': datetime.date.strftime('%Y-%m-%d')
 				}
 		)
 		return Model(**response)
