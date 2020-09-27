@@ -1,23 +1,23 @@
+from bs4 import BeautifulSoup
+from datetime import date
+
 from aioconverter.const import const
 from aioconverter.http.http import request
-from datetime import date
 from aioconverter.types.models import Model
+from aioconverter.handlers.handlers import pairs
 
 
 class Currency:
-	def __init__(self, token: str):
-		"""
-		:param token: your api-key https://currate.ru/
-		"""
-		self._token = token
+    def __init__(self, langue: str):
+        """
+        :param token: your api-key https://currate.ru/
+        """
+        self.langue = langue
 
-	async def converter(self, pairs: str = 'USDRUB') -> Model:
-		response = await request(
-				const.currency_api, {
-					'key': self._token,
-					'get': 'rates',
-					'pairs': pairs,
-					'date': f"{date.today()}"
-				}
-		)
-		return Model(**response)
+    async def course(self, currency: str = 'usdrub') -> Model:
+        response = await request(
+            const.currency_api, {
+            'q': f'курс+{await pairs(pairs=currency)}'
+            }
+        )
+        return response

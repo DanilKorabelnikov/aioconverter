@@ -1,1 +1,1 @@
-currency_api = "https://currate.ru/api/?"
+currency_api = "https://www.google.com/search?sxsrf=ALeKk03SZMZBWP5XrleHkRKcM3mROxcGJQ%3A1601204973589&ei=7XJwX4DDI-rLrgSgsYLIAQ"
