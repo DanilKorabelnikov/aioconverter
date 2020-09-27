@@ -14,10 +14,10 @@ class Currency:
         """
         self.langue = langue
 
-    async def course(self, currency: str = 'usdrub') -> Model:
+    async def course(self, currency: str = 'usdrub'):
         response = await request(
             const.currency_api, {
             'q': f'курс+{await pairs(pairs=currency)}'
             }
         )
-        return response
+        print(response)
