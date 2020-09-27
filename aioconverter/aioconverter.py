@@ -8,7 +8,7 @@ from aioconverter.handlers.handlers import pairs
 
 
 class Currency:
-    def __init__(self, langue: str):
+    def __init__(self, langue: str = "ru"):
         """
         :param token: your api-key https://currate.ru/
         """
